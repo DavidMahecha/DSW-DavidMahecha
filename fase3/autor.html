@@ -2,9 +2,17 @@
 <html>
 <header>
 	<link rel="stylesheet" type="text/css" href="librerias/flexboxgrid-6.3.1/css/flexboxgrid.min.css">
-    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/estilos.css">
 	<meta charset="utf-8">
-	<style type="text/css">  
+	<style type="text/css"> 
+        #imagen-personal{
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            background-size: cover;
+            background-image: url(../imagenes/yo.jpg);
+            margin: 20px;
+        } 
 	</style>
 	<title>Unidad 1- Fase 2 - Diseño y construcción</title>
 </header>
@@ -39,27 +47,38 @@
     </ul>
 </nav>
 <section>
-<div class="row color-div">
-    <div class="col-md-9 center-xs">
-        <div class="box">
-        	<h3 style="color: white">Datos personales autor</h3>
-            <p>Nombre: David Santiago Mahecha Vergara</p>
-            <p>Grupo: 301122A_953</p>
-	        <p>Correo: dsmahechav@unadvirtual.edu.co</p>
-            <p>Programa: Ingeniería en sistemas</p>
-	        <p>Skype: davidsantimahecha</p>
-	        <img src="../imagenes/yo.jpg" width="300px">
+    <div class="row color-div">
+        <div class="col-md-9 center-xs">
+            <div class="box">
+                <h3>Datos personales autor</h3>
+                <p>
+                    <b>Nombre:</b> David Santiago Mahecha Vergara
+                </p>
+                <p>
+                    <b>Grupo:</b> 301122A_953
+                </p>
+                <p>
+                    <b>Correo:</b> dsmahechav@unadvirtual.edu.co
+                </p>
+                <p>
+                    <b>Programa:</b> Ingeniería en sistemas
+                </p>
+                <p>
+                    <b>Skype:</b> davidsantimahecha
+                </p>
+                <img id="imagen-personal">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <aside class="seccion-redes">
+                <div class="fb-page" data-href="https://www.facebook.com/UniversidadUNAD" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/UniversidadUNAD" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/UniversidadUNAD">Universidad Nacional Abierta y a Distancia - UNAD Colombia</a></blockquote></div> 
+            </aside>
+        </div>
+        <div class="col-md-12 seccion-footer">
+            <footer>David Mahecha - UNAD</footer>
         </div>
     </div>
-    <div class="col-md-3">
-        <aside>
-            <div class="fb-page" data-href="https://www.facebook.com/UniversidadUNAD" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/UniversidadUNAD" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/UniversidadUNAD">Universidad Nacional Abierta y a Distancia - UNAD Colombia</a></blockquote></div> 
-        </aside>
-    </div>
-</div>
-<div class="col-md-12">
-    <footer>David Mahecha, todos los derechos reservados ©</footer>
-</div></section>
+</section>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v11.0" nonce="4QcCs5Gw"></script>
 </body>
 </html>
