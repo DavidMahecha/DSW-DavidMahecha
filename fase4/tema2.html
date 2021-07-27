@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <link rel="stylesheet" type="text/css" href="librerias/flexboxgrid-6.3.1/css/flexboxgrid.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta charset="utf-8">
+    <title>Unidad 1- Fase 2 - Diseño y construcción</title>
+</header>
+<body>
+
+<h1 class="titulo-principal">Frameworks CSS y Posicionamiento Web</h1>
+
+<nav class="menu-area">
+    <ul>
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+        <li>
+            <a href="#">Temas</a>
+            <ul class="dropdown-1">
+                <li><a href="tema1.html">Framework Boostrap</a></li>
+                <li><a href="tema2.html">Framework Foundation</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Recursos digitales</a>
+            <ul  class="dropdown-1">
+                <li><a href="recursos1.html">Ejemplos Boostrap</a></li>
+                <li><a href="recursos2.html">Ejemplos Foundation</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Aprendizaje</a>
+            <ul class="dropdown-1">
+                <li><a href="aprendizaje1.html">Actividad 1</a></li>
+                <li><a href="aprendizaje2.html">Actividad 2</a></li>
+            </ul>
+        </li>
+        <li><a href="autor.html">Autor</a></li>
+    </ul>
+</nav>
+<section>
+<div class="row color-div">
+    <div class="col-md-9">
+        <div class="box">
+            <h3>¿Qué es Fountation?</h3>
+            Foundation es un framework de interfaz de usuario responsive. Foundation proporciona una cuadrícula responsive e incluye componentes de interfaz de usuario HTML y CSS, plantillas, y fragmentos de código, incluyendo tipografía, formularios, botones, barras de navegación y otros componentes de interfaz usuario, así como extensiones de JavaScript opcionales. Foundation está mantenida por zurb.com y es un proyecto de código abierto.
+
+            <h3>Instalar con administradores de paquetes</h3>
+
+            npm install foundation-sites
+
+            <h3>Instalar Enlaces CDN</h3>
+            <!-- Compressed CSS -->
+            <pre>
+                &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+
+                <!-- Compressed JavaScript -->
+                &lt;script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous">&lt;/script>
+            </pre>
+
+            Hecho esto ya puedes importar estos archivos dentro de la sección head de los HTML:
+
+            <pre>
+                &lt;!doctype html>
+                    &lt;html class="no-js" lang="en">
+                      &lt;head>
+                        &lt;meta charset="utf-8" />
+                        &lt;meta http-equiv="x-ua-compatible" content="ie=edge">
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                        &lt;title>Foundation Starter Template&lt;/title>
+                        &lt;link rel="stylesheet" href="css/foundation.css" />
+                      &lt;/head>
+                      &lt;body>
+                        &lt;h1>Hello, world!&lt;/h1>
+
+                        &lt;script src="js/vendor/jquery.js">&lt;/script>
+                        &lt;script src="js/vendor/what-input.js">&lt;/script>
+                        &lt;script src="js/vendor/foundation.min.js">&lt;/script>
+                        &lt;script>
+                          $(document).foundation();
+                        &lt;/script>
+
+                      &lt;/body>
+                    &lt;/html>
+            </pre>
+            <h3>Elementos mas usados de foundation</h3>
+            <h3>Cómo crear columnas en Foundation</h3>
+            Para crear columnas lo primero que tienes que hacer es crear un elemento HTML padre con la etiqueta row. Esta etiqueta le dice a Foundation que el contenido van a ser columnas.
+
+            Otra cosa que tienes que tener en cuenta es que Foundation se basa en un sistema de 12 columnas, es decir, teniendo 12 columnas en total, si quieres crear dos columnas de igual tamaño, tienes que crear 2 columnas de 6. Si quieres 3 columnas tienes que crear 3 columnas de 4 porque 3 * 4 = 12 columnas en total.
+
+            Veamos un ejemplo creado dos columnas de igual tamaño:
+            <pre>
+                &lt;div class="row">
+                  &lt;div class="columns small-6">6 columns&lt;/div>
+                  &lt;div class="columns small-6">6 columns&lt;/div>
+                &lt;/div>
+                &lt;div class="row">
+                  &lt;div class="columns medium-6 large-4">12/6/4 columns&lt;/div>
+                  &lt;div class="columns medium-6 large-8">12/6/8 columns&lt;/div>
+                &lt;/div>
+            </pre>
+
+            <img src="../imagenes/gridfoundation.png">
+            <h3>Botones de Foundation</h3>
+            Para crear un botón tienes que usar la clase button. Dentro de los botones bootstrap ha creado una serie de tipos:
+            <pre>
+                <!-- Anchors (links) -->
+                &lt;a href="about.html" class="button">Learn More&lt;/a>
+                &lt;a href="#features" class="button">View All Features&lt;/a>
+
+                &lt;!-- Buttons (actions) -->
+                &lt;button type="button" class="success button">Save&lt;/button>
+                &lt;button type="button" class="alert button">Delete&lt;/button>
+            </pre>
+            <img src="../imagenes/buttonfoundation.png">
+            <h3>Alertas</h3>
+            Las alertas sirven para mostrar un mensaje al usuario. Como pasa con los botones, las alertas tienen varios tipos:
+            <pre>
+                &lt;div class="callout success" data-closable>
+                  Contenido de la alerta
+                &lt;/div>
+                &lt;div class="callout primary" data-closable>
+                  Contenido de la alerta
+                &lt;/div>
+                &lt;div class="callout warning" data-closable>
+                  Contenido de la alerta
+                &lt;/div>
+                &lt;div class="callout success" data-closable>
+                  Contenido de la alerta
+                &lt;/div>
+                &lt;div class="callout danger" data-closable>
+                  Contenido de la alerta
+                &lt;/div>
+            </pre>
+            <img src="../imagenes/alertfoundation.png">
+        </div>
+        <b>ZURB. Foundation for Sites. Recuperado de https://get.foundation/sites/docs/callout.html#coloring</b>
+    </div>
+    <div class="col-md-3">
+        <aside class="seccion-redes">
+            <div class="fb-page" data-href="https://www.facebook.com/UniversidadUNAD" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/UniversidadUNAD" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/UniversidadUNAD">Universidad Nacional Abierta y a Distancia - UNAD Colombia</a></blockquote></div>
+        </aside>
+    </div>
+    <div class="col-md-12 seccion-footer">
+        <footer>David Mahecha - UNAD</footer>
+    </div>
+</div>
+
+</section>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v11.0" nonce="4QcCs5Gw"></script>
+</body>
+</html>
